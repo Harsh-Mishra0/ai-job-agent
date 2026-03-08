@@ -331,7 +331,7 @@ def _generate_tailored_resume(resume_text: str, job: Dict, api_key: str) -> Opti
     try:
         import google.generativeai as genai
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel("gemini-1.5-flash",
+        model = genai.GenerativeModel("gemini-2.0-flash",
             generation_config=genai.GenerationConfig(max_output_tokens=2000, temperature=0.4))
         prompt = f"""Rewrite this resume to be perfectly tailored for the job below.
 
@@ -434,7 +434,7 @@ def _generate_cover_letter(resume_text: str, job: Dict, api_key: str) -> Optiona
     try:
         import google.generativeai as genai
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel("gemini-1.5-flash",
+        model = genai.GenerativeModel("gemini-2.0-flash",
             generation_config=genai.GenerationConfig(max_output_tokens=1000, temperature=0.6))
         prompt = f"""Write a tailored cover letter. Rules: never fabricate, under 320 words, specific opening line about this company.
 
@@ -727,7 +727,7 @@ def _generate_interview_questions(job: Dict, api_key: str) -> Optional[str]:
     try:
         import google.generativeai as genai
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel("gemini-1.5-flash",
+        model = genai.GenerativeModel("gemini-2.0-flash",
             generation_config=genai.GenerationConfig(max_output_tokens=1200, temperature=0.7))
         prompt = f"""Generate realistic interview questions for:
 Role: {job.get('title','')} at {job.get('company','')}

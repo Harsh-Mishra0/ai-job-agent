@@ -15,7 +15,7 @@ def render(user):
         st.markdown("### Google Gemini (Free LLM)")
         st.markdown("Get free key → [aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey)")
         key = st.text_input("API Key", value=os.getenv("GEMINI_API_KEY",""), type="password", placeholder="AIza...")
-        mdl = st.selectbox("Model", ["gemini-1.5-flash","gemini-1.5-pro","gemini-2.0-flash-exp"])
+        mdl = st.selectbox("Model", ["gemini-2.0-flash","gemini-2.0-flash-lite","gemini-1.5-flash","gemini-1.5-pro"])
         c1, c2 = st.columns(2)
         with c1:
             if st.button("💾 Save", use_container_width=True):

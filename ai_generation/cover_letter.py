@@ -7,7 +7,7 @@ Path("outputs/cover_letters").mkdir(parents=True, exist_ok=True)
 
 
 class CoverLetterGenerator:
-    def __init__(self, api_key: str, model: str = "gemini-1.5-flash"):
+    def __init__(self, api_key: str, model: str = "gemini-2.0-flash"):
         import google.generativeai as genai
         genai.configure(api_key=api_key)
         self._genai = genai

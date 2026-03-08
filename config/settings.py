@@ -1,7 +1,7 @@
 import os
 
 GEMINI_API_KEY  = os.getenv("GEMINI_API_KEY", "")
-GEMINI_MODEL    = os.getenv("GEMINI_MODEL",   "gemini-1.5-flash")
+GEMINI_MODEL    = os.getenv("GEMINI_MODEL",   "gemini-2.0-flash")
 MAX_TOKENS      = 2048
 RESUME_PATH     = "data/my_resume.txt"
 RESUME_OUT_DIR  = "outputs/tailored_resumes"
