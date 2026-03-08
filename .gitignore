@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+database/jobs.db
+outputs/
+data/my_resume.txt
+email_parser/token.json
+email_parser/credentials.json
+.env
+*.zip
+faiss_index/
